@@ -15,69 +15,10 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
   padding: 3rem;
   box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  /*setting background image with a lineargradient bottom right
-  and position fixed to top and size to cover*/
-  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img//hero.jpg");
-  background-position: top;
-  background-size: cover;
-  /*To clip the image to a polygon 
-    Four points of a polygon
-    polygon(x y, x y, x y, x y);
-  */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /*For not showing the crumpy image bottom*/
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    /* Center the box to the center of the page 
-    using position property */
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #ffffff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
 
 /* ---------------------------- */
 /* ---------- ANIMATIONS ------ */
@@ -141,6 +82,29 @@ body {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0); } }
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
 
 .btn:link, .btn:visited {
   display: inline-block;
@@ -210,3 +174,38 @@ body {
   animation: moveFromBottom 0.5s ease-out;
   -webkit-animation: moveFromBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  /*setting background image with a lineargradient bottom right
+    and position fixed to top and size to cover*/
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img//hero.jpg");
+  background-position: top;
+  background-size: cover;
+  /*To clip the image to a polygon 
+      Four points of a polygon
+      polygon(x y, x y, x y, x y);
+    */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*For not showing the crumpy image bottom*/
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    /* Center the box to the center of the page 
+      using position property */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center; }

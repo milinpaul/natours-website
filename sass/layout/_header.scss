@@ -1,0 +1,46 @@
+.header {
+  height: 95vh;
+  /*setting background image with a lineargradient bottom right
+    and position fixed to top and size to cover*/
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url('../img//hero.jpg');
+  background-position: top;
+  background-size: cover;
+  /*To clip the image to a polygon 
+      Four points of a polygon
+      polygon(x y, x y, x y, x y);
+    */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*For not showing the crumpy image bottom*/
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    /* Center the box to the center of the page 
+      using position property */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
