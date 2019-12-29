@@ -12,10 +12,12 @@ box property to border-box. So that padding and magin will be added to
 element.
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
@@ -29,6 +31,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -54,17 +57,17 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.header-text-box {
+.header__text-box {
   /* Center the box to the center of the page 
   using position property */
   position: absolute;
@@ -86,7 +89,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -96,7 +99,7 @@ body {
   animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -254,16 +257,16 @@ body {
   opacity: 0;
 }
 
-.btn-white {
+.btn--white {
   color: #777;
   background-color: #ffffff;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #ffffff;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveFromBottom 0.5s ease-out;
   -webkit-animation: moveFromBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
